@@ -1,12 +1,13 @@
-import 'package:animation_app/custom_drawer/apptheme.dart';
+import 'package:animation_app/app_theme.dart';
 import 'package:animation_app/custom_drawer/drawer_user_controller.dart';
 import 'package:animation_app/custom_drawer/home_drawer.dart';
+import 'package:animation_app/feedback_screen.dart';
+import 'package:animation_app/help_screen.dart';
 import 'package:animation_app/home_screen.dart';
+import 'package:animation_app/invite_friend_screen.dart';
 import 'package:flutter/material.dart';
 
 class NavigationHomeScreen extends StatefulWidget {
-  const NavigationHomeScreen({super.key});
-
   @override
   _NavigationHomeScreenState createState() => _NavigationHomeScreenState();
 }
@@ -57,17 +58,17 @@ class _NavigationHomeScreenState extends State<NavigationHomeScreen> {
           break;
         case DrawerIndex.Help:
           setState(() {
-            screenView = const MyHomePage();
+            screenView = HelpScreen();
           });
           break;
         case DrawerIndex.FeedBack:
           setState(() {
-            screenView = const MyHomePage();
+            screenView = FeedbackScreen();
           });
           break;
         case DrawerIndex.Invite:
           setState(() {
-            screenView = const MyHomePage();
+            screenView = InviteFriend();
           });
           break;
         default:

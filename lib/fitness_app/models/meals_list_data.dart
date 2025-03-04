@@ -46,7 +46,7 @@ class MealsListData {
       kacl: 0,
       meals: <String>['Recommend:', '703 kcal'],
       startColor: '#6F72CA',
-      endColor: '#1E9999',
+      endColor: '#1E1466',
     ),
   ];
 }

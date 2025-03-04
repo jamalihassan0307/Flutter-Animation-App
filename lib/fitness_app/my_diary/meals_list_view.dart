@@ -3,6 +3,8 @@ import 'package:animation_app/fitness_app/models/meals_list_data.dart';
 import 'package:animation_app/main.dart';
 import 'package:flutter/material.dart';
 
+import '../../main.dart';
+
 class MealsListView extends StatefulWidget {
   const MealsListView(
       {Key? key, this.mainScreenAnimationController, this.mainScreenAnimation})
@@ -48,7 +50,7 @@ class _MealsListViewState extends State<MealsListView>
           child: Transform(
             transform: Matrix4.translationValues(
                 0.0, 30 * (1.0 - widget.mainScreenAnimation!.value), 0.0),
-            child: SizedBox(
+            child: Container(
               height: 216,
               width: double.infinity,
               child: ListView.builder(
@@ -142,7 +144,7 @@ class MealsView extends StatelessWidget {
                             Text(
                               mealsListData!.titleTxt,
                               textAlign: TextAlign.center,
-                              style: const TextStyle(
+                              style: TextStyle(
                                 fontFamily: FitnessAppTheme.fontName,
                                 fontWeight: FontWeight.bold,
                                 fontSize: 16,
@@ -160,7 +162,7 @@ class MealsView extends StatelessWidget {
                                   children: <Widget>[
                                     Text(
                                       mealsListData!.meals!.join('\n'),
-                                      style: const TextStyle(
+                                      style: TextStyle(
                                         fontFamily: FitnessAppTheme.fontName,
                                         fontWeight: FontWeight.w500,
                                         fontSize: 10,
@@ -180,7 +182,7 @@ class MealsView extends StatelessWidget {
                                       Text(
                                         mealsListData!.kacl.toString(),
                                         textAlign: TextAlign.center,
-                                        style: const TextStyle(
+                                        style: TextStyle(
                                           fontFamily: FitnessAppTheme.fontName,
                                           fontWeight: FontWeight.w500,
                                           fontSize: 24,
@@ -188,9 +190,9 @@ class MealsView extends StatelessWidget {
                                           color: FitnessAppTheme.white,
                                         ),
                                       ),
-                                      const Padding(
-                                        padding:
-                                            EdgeInsets.only(left: 4, bottom: 3),
+                                      Padding(
+                                        padding: const EdgeInsets.only(
+                                            left: 4, bottom: 3),
                                         child: Text(
                                           'kcal',
                                           style: TextStyle(
@@ -213,7 +215,7 @@ class MealsView extends StatelessWidget {
                                         BoxShadow(
                                             color: FitnessAppTheme.nearlyBlack
                                                 .withOpacity(0.4),
-                                            offset: const Offset(8.0, 8.0),
+                                            offset: Offset(8.0, 8.0),
                                             blurRadius: 8.0),
                                       ],
                                     ),
@@ -221,8 +223,7 @@ class MealsView extends StatelessWidget {
                                       padding: const EdgeInsets.all(6.0),
                                       child: Icon(
                                         Icons.add,
-                                        color:
-                                            HexColor(mealsListData!.endColor),
+                                        color: HexColor(mealsListData!.endColor),
                                         size: 24,
                                       ),
                                     ),
