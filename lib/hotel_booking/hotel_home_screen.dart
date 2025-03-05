@@ -2,7 +2,6 @@ import 'package:animation_app/hotel_booking/calendar_popup_view.dart';
 import 'package:animation_app/hotel_booking/hotel_list_view.dart';
 import 'package:animation_app/hotel_booking/model/hotel_list_data.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:intl/intl.dart';
 import 'filters_screen.dart';
 import 'hotel_app_theme.dart';
@@ -86,7 +85,7 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                         },
                         body: Container(
                           color:
-                              HotelAppTheme.buildLightTheme().backgroundColor,
+                              HotelAppTheme.buildLightTheme().colorScheme.surface,
                           child: ListView.builder(
                             itemCount: hotelList.length,
                             padding: const EdgeInsets.only(top: 8),
@@ -126,7 +125,7 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
   Widget getListUI() {
     return Container(
       decoration: BoxDecoration(
-        color: HotelAppTheme.buildLightTheme().backgroundColor,
+        color: HotelAppTheme.buildLightTheme().colorScheme.surface,
         boxShadow: <BoxShadow>[
           BoxShadow(
               color: Colors.grey.withOpacity(0.2),
@@ -329,7 +328,7 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
               padding: const EdgeInsets.only(right: 16, top: 8, bottom: 8),
               child: Container(
                 decoration: BoxDecoration(
-                  color: HotelAppTheme.buildLightTheme().backgroundColor,
+                  color: HotelAppTheme.buildLightTheme().colorScheme.surface,
                   borderRadius: const BorderRadius.all(
                     Radius.circular(38.0),
                   ),
@@ -382,9 +381,9 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                 },
                 child: Padding(
                   padding: const EdgeInsets.all(16.0),
-                  child: Icon(FontAwesomeIcons.magnifyingGlass,
+                  child: Icon(Icons.search,
                       size: 20,
-                      color: HotelAppTheme.buildLightTheme().backgroundColor),
+                      color: HotelAppTheme.buildLightTheme().colorScheme.surface),
                 ),
               ),
             ),
@@ -404,7 +403,7 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
           child: Container(
             height: 24,
             decoration: BoxDecoration(
-              color: HotelAppTheme.buildLightTheme().backgroundColor,
+              color: HotelAppTheme.buildLightTheme().colorScheme.surface,
               boxShadow: <BoxShadow>[
                 BoxShadow(
                     color: Colors.grey.withOpacity(0.2),
@@ -415,7 +414,7 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
           ),
         ),
         Container(
-          color: HotelAppTheme.buildLightTheme().backgroundColor,
+          color: HotelAppTheme.buildLightTheme().colorScheme.surface,
           child: Padding(
             padding:
                 const EdgeInsets.only(left: 16, right: 16, top: 8, bottom: 4),
@@ -513,7 +512,7 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
   Widget getAppBarUI() {
     return Container(
       decoration: BoxDecoration(
-        color: HotelAppTheme.buildLightTheme().backgroundColor,
+        color: HotelAppTheme.buildLightTheme().colorScheme.surface,
         boxShadow: <BoxShadow>[
           BoxShadow(
               color: Colors.grey.withOpacity(0.2),
@@ -586,7 +585,7 @@ class _HotelHomeScreenState extends State<HotelHomeScreen>
                       onTap: () {},
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Icon(FontAwesomeIcons.locationDot),
+                        child: Icon(Icons.location_on),
                       ),
                     ),
                   ),
