@@ -291,11 +291,11 @@ class _DesignCourseHomeScreenState extends State<DesignCourseHomeScreen> {
                 ),
               ],
             ),
-          ),
+          ),  
           Container(
             width: 60,
             height: 60,
-            child: Image.asset('assets/design_course/userImage.png'),
+            child: Image.asset('assets/images/userImage.jpg'),
           )
         ],
       ),

@@ -38,7 +38,7 @@ class _CategoryListViewState extends State<CategoryListView>
     return Padding(
       padding: const EdgeInsets.only(top: 16, bottom: 16),
       child: Container(
-        height: 134,
+        height: 140,
         width: double.infinity,
         child: FutureBuilder<bool>(
           future: getData(),
@@ -203,7 +203,7 @@ class CategoryView extends StatelessWidget {
                                           ),
                                           Padding(
                                             padding: const EdgeInsets.only(
-                                                bottom: 16, right: 16),
+                                                bottom: 10, right: 16),
                                             child: Row(
                                               mainAxisAlignment:
                                                   MainAxisAlignment
