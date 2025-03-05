@@ -2,7 +2,8 @@
 
 A Flutter-based application showcasing various animations and UI designs.
 
-![Cover Image 1](https://github.com/jamalihassan0307/Flutter-Animation-App/releases/download/1.0.0/app-armeabi-v7a-release.apk)
+![Banner](banner.png)
+[Download APK](https://github.com/jamalihassan0307/Flutter-Animation-App/releases/download/1.0.0/app-armeabi-v7a-release.apk)
 
 # Projects Screenshots
 
